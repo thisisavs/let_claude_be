@@ -1,0 +1,14 @@
+[Unit]
+Description=Raspberry Pi System Monitor Dashboard
+After=network.target
+
+[Service]
+Type=simple
+User=sai
+WorkingDirectory=/home/sai/claude_code_home/project
+ExecStart=/usr/bin/python3 /home/sai/claude_code_home/project/pi_dashboard.py
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
